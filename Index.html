@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <!-- AOS Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #0d0d0d;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px;
+            position: absolute;
+            top: 0;
+        }
+        .left-side, .right-side {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .left-side img, .right-side img {
+            width: 20px;
+            height: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+        }
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 100px;
+        }
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile h1 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .profile h5 {
+            color: #ccc;
+            font-size: 1rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            background: linear-gradient(to right, #ffffff, #6d6d6d);
+            -webkit-background-clip: text;
+            color: transparent;
+            line-height: 1.4;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .logos {
+            margin-top: 50px;
+            display: flex;
+            gap: 30px;
+        }
+        .logos img {
+            width: 100px;
+            opacity: 0.7;
+        }
+        button {
+            padding: 10px 25px;
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #303030;
+        }
+        .cards {
+            margin: 50px auto;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+        }
+        .card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin-top: 50px;
+        }
+        .about-text {
+            flex: 1;
+            text-align: left;
+        }
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .about-text p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #ccc;
+            padding-right: 10%;
+        }
+      
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 150px;
+            object-fit: fill;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 15px 0 10px;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .card a {
+            display: inline-block;
+            text-align: center;
+            padding: 10px 15px;
+            background-color: #303030;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        .card a:hover {
+            background-color: #505050;
+        }
+
+        .skills-section {
+            font-size: 1.2rem;
+            margin: 10px auto;  /* Center the section horizontally */
+            max-width: 800px;    /* Set a maximum width for the section */
+            text-align: left;    /* Align the content inside the section to the left */
+        }
+        
+        .skills-section ul {
+            list-style-type: disc; /* Default bullet points */
+            padding-left: 20px;    /* Add some padding to the left of the list */
+        }
+        
+        .skills-section li {
+            margin-bottom: 10px; 
+        }
+
+        .about-image {
+            text-align: center;
+            padding: 60px;
+        }
+        
+        .about-image img {
+            width: 90%; /* Adjust image size */
+            max-width: 450px;
+            height: 80%;
+            border-radius: 10px; /* You can adjust this size */
+        }
+        
+        .name {
+       
+            font-size: 16px;
+            font-weight: bold;
+            color:white; /* You can customize the color */
+            text-align: left;
+            padding: 30px;
+        }
+
+
+        </style>
+       
+    
+</head>
+<body>
+
+    <header>
+        <div class="left-side">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Gmail_icon_%282020%29.svg" alt="Email Icon">
+            <a href="mailto:sahnabin937@gmail.com">sahnabin937@gmail.com</a>
+        </div>
+        <div class="right-side">
+            <a href="https://www.linkedin.com/in/nabin-sah-9b6382166/" target="_blank">LinkedIn</a> /
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </div>
+    </header>
+    <br><br><br><br>
+
+    <!-- Profile Section with AOS Animation -->
+    <div class="profile">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQFQVBwtQwOqEg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729015475226?e=1734566400&v=beta&t=_W9nKFJ_KKOJzbMLAMir3JEKjMnNRMQWNKfU76OxyBw" alt="Profile Picture" data-aos="zoom-in" data-aos-delay="500">
+        <h5 data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1200"> Hi, I'm Nabin Sah 👋</h5>
+        <h2 data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="1500">Supply Chain & Logistics <br> in a hub operation/compliance role.</h2>
+        <a href="latestshots.html" data-aos="zoom-in" data-aos-delay="2000" >
+            <button>Latest Shots ➔</button>
+        </a>
+    </div>
+
+    <br>
+
+    <div class="logos">
+        <img src="https://www.dtdc.com/sites/all/themes/dtdc/logo.png" alt="logo 1" data-aos="fade-right" data-aos-delay="4000">
+        <img src="https://sellonboard.com/wp-content/uploads/2021/09/xpressbees.png" alt="Logo 2"data-aos="fade-right" data-aos-delay="3500">
+        <img src="https://www.thereportingtoday.com/wp-content/uploads/2023/01/Delhivery-Logo.jpg" alt="Logo 3" data-aos="fade-right" data-aos-delay="3000">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTAwMwvjwI_rGc1E-DaT_HBYPxC7y9w6BAyg&s" alt="Logo 4"data-aos="fade-right" data-aos-delay="2500" >
+    </div>
+    <br><br><br><br><br><br><br>
+
+     <!-- About Section with Image on Right and Text on Left -->
+     <h2 data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="1000">About.</h2>
+     <div class="about-section">
+         <div class="about-image" data-aos="zoom-in" data-aos-delay="800">
+             <img src="img/pro.jpg" alt="About Image" data-aos="zoom-in" data-aos-delay="1700">
+             <p class="name">Nabin Sah</p>
+         </div>
+         <div class="about-text" data-aos="fade-left" data-aos-delay="1900">
+             <p>Supply Chain & Logistics in a hub operation/compliance role. The individual seems to have experience in various aspects of supply chain management, including Last mile and route planning, document rectification and verification, vendor management, First Mile to Last Mile, dealing with B2B and B2C clients and team Coordination. Have experience in handling Sales TaX GST issues and have reduced non-compliance costs by 10%. The text also includes some responsibilities related to monitoring operational activities, preparing various reports, and corresponding regarding delivery and damage. Overall, the individual has experience in managing various aspects of supply chain logistics, ensuring compliance with regulations and policies, and reducing costs.</p>
+         </div>
+     </div>
+     
+
+    </div><br><br><br>
+
+    <!--Skills Section -->
+    <h2 data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="1500">Top Skills</h2><br><br>
+    <div class="skills-section"data-aos="fade-left" data-aos-delay="2000">
+        <ul>
+            <li>Documentation and verification .</li>
+            <li>Team Coordination.</li>
+            <li>Warehouse Operations.</li>
+            <li>Supply chain operation .</li>
+            <li>Dispatch planning .</li>
+            <li>Cost Management.</li>
+            <li>Business Expansion.</li>
+            <li>Employee Management.</li>
+            <li>Analytics .</li>
+            <li>Productivity Improvement .</li>
+        </ul>
+    </div><br><br><br>
+    <div style="page-break-after: always;"></div>
+
+     <!-- Cards Section -->
+     <h2 data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="1500">Works With</h2><br><br>
+    <div class="cards">
+        <div class="card"data-aos="zoom-in" data-aos-delay="1500">
+            <img src="https://www.dtdc.com/sites/all/themes/dtdc/logo.png" alt="Project 1">
+            <h3>Branch Manager</h3>
+            <p>Full-timeDTDC Express Limited · Full-time
+                Jun 2024 - Present · 
+                Delhi, India · <br>
+                On-site.</p><br>
+            <a href="DTDC.html">View Details</a>
+        </div>
+        <div class="card"data-aos="zoom-in" data-aos-delay="1500">
+            <img src="https://sellonboard.com/wp-content/uploads/2021/09/xpressbees.png" alt="Project 2">
+            <h3>Senior Executive</h3>
+            <p>Full-timeXpressbees · Full-time
+                Mar 2023 - May 2024 · <br> 1 yr 3 mosMar 2023 to May 2024 · 1 yr 3 mos
+                Gurgoan · On-site.</p>
+            <a href="xpressbees.html">View Details</a>
+        </div>
+        <div class="card"data-aos="zoom-in" data-aos-delay="2000">
+            <img src="https://www.thereportingtoday.com/wp-content/uploads/2023/01/Delhivery-Logo.jpg" alt="Project 3">
+            <h3>Executive</h3>
+            <p> Full-time
+                Nov 2021 - Feb 2023 · 1 yr 4 mosNov 2021 to Feb 2023 · 1 yr 4 mos
+                Gurgoan India · <br>On-site</p>
+            <a href="Delhivery.html">View Details</a>
+        </div>
+        <div class="card"data-aos="zoom-in" data-aos-delay="2500">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTAwMwvjwI_rGc1E-DaT_HBYPxC7y9w6BAyg&s" alt="Project 4">
+            <h3>Management Trainee</h3>
+            <p>Internship
+                Nov 2021 - Nov 2021 · 1 moNov 2021 to Nov 2021 · 1 mo
+                Gurgoan India · <br>On-site.</p>
+            <a href="Vtrans.html">View Details</a>
+        </div>
+    </div><br><br><br>
+
+ <!-- Education -->
+    <h2 data-aos="zoom-in" data-aos-delay="1500" data-aos-duration="1500">Education</h2><br><br>
+    <div class="cards">
+        <div class="card"data-aos="zoom-in" data-aos-delay="1500">
+            <h3>Institute of Advance Management and Research</h3><br><br>
+            <p>PGDM/MBA-, Logistics, Materials, and Supply Chain ManagementPGDM/MBA-, Logistics, Materials, and Supply Chain Management
+                2019 - 20212019 - 2021</p><br>
+
+        </div>
+        <div class="card"data-aos="zoom-in" data-aos-delay="1500">
+            <h3>Sawmi Vivekanand<br>Subharti university</h3><br><br>
+            <p> Bachelor of Business Administration - BBA, GeneralBachelor of Business Administration - BBA, General
+                2015 - 20192015 - 2019, Merut</p>
+        </div>
+        <div class="card"data-aos="zoom-in" data-aos-delay="2000">
+            <h3>New English +2</h3><br><br>
+            <p> 12th, Management<br>
+                2013 - 2015<br>
+                From Nepal</p>
+        </div>
+        <div class="card"data-aos="zoom-in" data-aos-delay="2500">
+            <h3>Himali boarding school.</h3><br>
+            <p> 10th<br>
+                2012 - 2013<br>
+                From Nepal</p>
+        </div>
+    </div>
+
+    <!-- JS for AOS Animatcsaxion -->
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
